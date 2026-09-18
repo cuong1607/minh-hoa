@@ -553,7 +553,8 @@ function showSummary() {
           </tr>
         `).join('')}
         <tr class="row-total">
-          <td colspan="5" class="total-text">TỔNG TIỀN</td>
+          <td colspan="4" class="total-text">TỔNG</td>
+          <td class="col-sl" style="font-weight:800;font-size:1rem;">${items.reduce((s,i) => s + i.qty, 0)}</td>
           <td class="total-value">${formatMoney(grand)}</td>
         </tr>
       </tbody>
